@@ -1,4 +1,4 @@
-#summary User guide explain steps to including GXT Multi Upload widget into your project.
+#summary How to include GXT Multi Upload widget into your project.
 
 = Introduction =
 
