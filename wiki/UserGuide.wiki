@@ -44,6 +44,9 @@ view.getFormPanel().setAction("multiupload");
 MultiUploadPresenter presenter = new MultiUploadPresenter(view);
 presenter.go();
 }}}
-First of all, you have to create a GXT's Grid instance, or you can use your custom one (extended from GXT's Grid class or its ancestors). Grid has to be a Model type, which is GXT MultiUpload interface, which defines access methods for filename, status and status message. For detail info, see source code. The default implementation of this interface is FileUploadModel class. If you want use your own model, it  has to implements a Model interface.
+First of all, you have to create a GXT's Grid instance, or you can use your custom one (extended from GXT's Grid class or its ancestors). ColumnModel can contains e.g. filename, but this is up to you. Grid has to be a Model type, which is GXT MultiUpload interface, which defines access methods for filename, status and status message. For detail info, see source code. The default implementation of this interface is FileUploadModel class. If you want use your own model, it  has to implements a Model interface.
 
 In next lines, the view class is instantiated and the action (URL) of service for upload handling is defined. After instantiating presenter, the method go() is called, which binds Presenter code together with View and shows the dialog.
+
+==Create server side code for handling uploads==
+sfasfsdf
