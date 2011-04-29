@@ -9,12 +9,14 @@ So just follow these steps:
   # Include widget module into your GWT module.
   # Instantiate and call MVP classes of widget.
   # Create server side code for handling uploads.
+
 ==Download or build project from SVN==
 You can download the latest jar module of widget from Downloads section of this project web.
 
-For checkout the project from SVN, see Source section. After project checkout, it is ready to build using Maven project tool. After build, you can install it into your local Maven repository.
+For checkout the project from SVN, see Source section. After project checkout, it is ready to build using Maven project tool. After build, you can install jar file it into your Maven repository.
+
 ==Include jar file into classpath==
-This depends on your favorite IDE or build tool. When you are using maven, just add the following dependency fragment into your project:
+This depends on your favorite IDE or build tool. When you are using maven, and want to include widget into your project, you have to install jar into your Maven repository. Then add the following dependency fragment into your project:
 {{{
 <dependency>
   <groupId>com.gxt-multi-upload</groupId> 
@@ -23,3 +25,5 @@ This depends on your favorite IDE or build tool. When you are using maven, just 
 </dependency>
 }}}
 The version number depends on downloaded/builded version.
+
+==Include widget module into your GWT module==
