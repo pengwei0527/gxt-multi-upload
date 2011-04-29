@@ -2,8 +2,9 @@
 
 =Including and using widget in your project=
 
-Including and using GXT Multi Upload widget in your project is easy. The widget requires GWT and GXT libraries and corresponding project structure.
-So just follow these steps:
+Including and using GXT Multi Upload widget in your project is easy. The widget requires GWT and GXT libraries and corresponding project structure. I am using GWT version 2.1.0 and GXT with version 2.2.1.
+
+So, follow these steps:
   # Download (or build from SVN) the latest version of widget.
   # Include jar file into classpath.
   # Include widget module into your GWT module.
