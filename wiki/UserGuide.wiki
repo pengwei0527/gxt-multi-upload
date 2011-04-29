@@ -9,4 +9,6 @@ So, just follow these steps:
   # Include widget module into your GWT module.
   # Instantiate and call MVP classes of widget.
 ==Download/Build project from SVN==
-  
+You can download the latest jar module of widget from Downloads section of this project web.
+
+For checkout the project from SVN, see Source section. After project checkout, it is ready to build using Maven project tool. 
