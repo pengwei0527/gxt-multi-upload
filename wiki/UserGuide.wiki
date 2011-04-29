@@ -8,5 +8,5 @@ So, just follow these steps:
   # Include jar file into classpath.
   # Include widget module into your GWT module.
   # Instantiate and call MVP classes of widget.
-
+==Download/Build project from SVN==
   
