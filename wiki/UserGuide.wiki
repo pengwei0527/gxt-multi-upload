@@ -36,7 +36,10 @@ MultiUpload is the name of project's GWT module.
 ==Instantiate and call MVP classes of widget==
 The source code for instantiate Presenter and View of widget should be following:
 {{{
-MultiUploadView view = new MultiUploadView(new FileUploadGrid());
+ColumnModel columnModel = ...
+Grid<Model> grid = new Grid<Model>(new ListStore<Model>(), columnModel);
+
+MultiUploadView view = new MultiUploadView(grid);
 view.getFormPanel().setAction("multiupload");
 MultiUploadPresenter presenter = new MultiUploadPresenter(view);
 presenter.go();
