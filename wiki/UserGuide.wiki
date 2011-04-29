@@ -17,5 +17,9 @@ For checkout the project from SVN, see Source section. After project checkout, i
 This depends on your favorite IDE or build tool. When you are using maven, just add the following dependency fragment into your project:
 {{{
 <dependency>
+  <groupId>com.gxt-multi-upload</groupId> 
+  <artifactId>gxt-multi-upload</artifactId> 
+  <version>0.1</version> 
 </dependency>
 }}}
+The version number depends on downloaded/builded version.
