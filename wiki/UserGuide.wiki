@@ -3,12 +3,19 @@
 =Including and using widget in your project=
 
 Including and using GXT Multi Upload widget in your project is easy. The widget requires GWT and GXT libraries and corresponding project structure.
-So, just follow these steps:
+So just follow these steps:
   # Download (or build from SVN) the latest version of widget.
   # Include jar file into classpath.
   # Include widget module into your GWT module.
   # Instantiate and call MVP classes of widget.
-==Download/Build project from SVN==
+  # Create server side code for handling uploads.
+==Download or build project from SVN==
 You can download the latest jar module of widget from Downloads section of this project web.
 
-For checkout the project from SVN, see Source section. After project checkout, it is ready to build using Maven project tool. 
+For checkout the project from SVN, see Source section. After project checkout, it is ready to build using Maven project tool. After build, you can install it into your local Maven repository.
+==Include jar file into classpath==
+This depends on your favorite IDE or build tool. When you are using maven, just add the following dependency fragment into your project:
+{{{
+<dependency>
+</dependency>
+}}}
