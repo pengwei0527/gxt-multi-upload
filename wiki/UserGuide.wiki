@@ -34,4 +34,11 @@ It's easy. Just add following fragment into your GWT module:
 MultiUpload is the name of project's GWT module.
 
 ==Instantiate and call MVP classes of widget==
-dsdfsfsdf
+The source code for instantiate Presenter and View of widget should be following:
+{{{
+MultiUploadView view = new MultiUploadView(new FileUploadGrid());
+view.getFormPanel().setAction("multiupload");
+MultiUploadPresenter presenter = new MultiUploadPresenter(view);
+presenter.go();
+}}}
+The class FileUploadGrid is a class extended from GXT Grid class. You can also use direct Grid's instance. The FileUploadGrid should looks like this:
