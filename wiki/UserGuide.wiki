@@ -27,3 +27,11 @@ This depends on your favorite IDE or build tool. When you are using maven, and w
 The version number depends on downloaded/builded version.
 
 ==Include widget module into your GWT module==
+It's easy. Just add following fragment into your GWT module:
+{{{
+<inherits name='gxt.multiupload.MultiUpload'/>
+}}}
+MultiUpload is the name of project's GWT module.
+
+==Instantiate and call MVP classes of widget==
+dsdfsfsdf
