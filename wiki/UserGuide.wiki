@@ -75,7 +75,7 @@ public class GwtMultiUploadServlet extends HttpServlet {
 				String name = item.getFieldName();
 				InputStream stream = item.openStream();
 				if (item.isFormField()) {
-					// TODO handle form fields (if there are any)
+					// Handle form fields (if there are any)
 				} else {
 					// TODO handle file writing here
 
@@ -91,7 +91,7 @@ public class GwtMultiUploadServlet extends HttpServlet {
 			mapper.writeValue(response.getOutputStream(), fileUploadItems);	
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			// 
+			// TODO Don't forget to handle error responding
 		}		
 	}
 }
