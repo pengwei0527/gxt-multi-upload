@@ -52,5 +52,7 @@ In next lines, the view class is instantiated and the action (URL) of service fo
 ==Create server side code for handling uploads==
 Server side code can be written in any language, which supports HTTP  form-type request processing. The response has to be a HTML mime type in JSON format. The JSON response example is following:
 {{{
-
+{ name:'filename.jpg', status:'OK', message:'Ok.' }
 }}}
+It consist of three attributes:
+  # Name - the name of uploaded file
