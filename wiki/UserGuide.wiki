@@ -63,9 +63,38 @@ This format is not strict, you can change existing key-pair attributes, or add a
 The server side code should looks like following Java Servlet:
 {{{
 public class GwtMultiUploadServlet extends HttpServlet {
-  @Override
-  protected void doPost(HttpServletRequest req, HttpServletResponse response) {
-
-  }
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		List<FileUploadItem> fileUploadItems = new ArrayList<FileUploadItem>();
+		try {
+			ServletFileUpload upload = new ServletFileUpload();
+			// Parse the request
+			FileItemIterator iter = upload.getItemIterator(req);
+			while (iter.hasNext()) {
+				FileItemStream item = iter.next();
+				String name = item.getFieldName();
+				InputStream stream = item.openStream();
+				if (item.isFormField()) {
+					System.out.println("Form field " + name + " with value " + Streams.asString(stream) + " detected.");
+				} else {
+					System.out.println("File field " + name + " with file name " + item.getName() + " detected.");
+					// TODO zavolat service
+					FileUploadItem model = new FileUploadItem();
+					String fileName = StringUtils.getFilename(StringUtils.cleanPath(item.getName()));
+					model.setName(fileName);
+					model.setState(UploadState.OK.name());
+					fileUploadItems.add(model);
+				}
+			}
+			
+			ObjectMapper mapper = new ObjectMapper();
+			mapper.writeValue(response.getOutputStream(), fileUploadItems);
+			response.setStatus(HttpServletResponse.SC_OK);
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}		
+	}
 }
 }}}
