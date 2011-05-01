@@ -60,7 +60,7 @@ It consist of three attributes:
   # message - human friendly message for the user. It could contains for example status message, size of uploaded file or just error messsage from the server.
 This format is not strict, you can change existing key-pair attributes, or add another attributes to suit your needs.
 
-The server side code should looks like following Java Servlet:
+The server side code should looks like following Java Servlet skelet:
 {{{
 public class GwtMultiUploadServlet extends HttpServlet {
 	@Override
