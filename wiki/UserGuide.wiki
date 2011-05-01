@@ -62,5 +62,10 @@ This format is not strict, you can change existing key-pair attributes, or add a
 
 The server side code should looks like following Java Servlet:
 {{{
+public class GwtMultiUploadServlet extends HttpServlet {
+  @Override
+  protected void doPost(HttpServletRequest req, HttpServletResponse response) {
 
+  }
+}
 }}}
