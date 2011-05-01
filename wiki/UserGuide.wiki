@@ -66,7 +66,7 @@ public class GwtMultiUploadServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse response) {
 		response.setContentType("text/html");
-		List<FileUploadItem> fileUploadItems = new ArrayList<FileUploadItem>();
+		FileUploadItem model = new FileUploadItem();
 		try {
 			ServletFileUpload upload = new ServletFileUpload();
 			FileItemIterator iter = upload.getItemIterator(req);
@@ -79,19 +79,18 @@ public class GwtMultiUploadServlet extends HttpServlet {
 				} else {
 					// TODO handle file writing here
 
-					FileUploadItem model = new FileUploadItem();
 					String fileName = StringUtils.getFilename(StringUtils.cleanPath(item.getName()));
 					model.setName(fileName);
 					model.setState(UploadState.OK.name());
-					fileUploadItems.add(model);
 				}
 			}
 			
 			ObjectMapper mapper = new ObjectMapper();
-			mapper.writeValue(response.getOutputStream(), fileUploadItems);	
+			mapper.writeValue(response.getOutputStream(), model);	
 		} catch (Exception ex) {
 			// TODO Don't forget to handle error responding
 		}		
 	}
 }
 }}}
+In code above is used [Jackson http://jackson.codehaus.org/] library for serializing
