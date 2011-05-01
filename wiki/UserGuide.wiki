@@ -90,7 +90,6 @@ public class GwtMultiUploadServlet extends HttpServlet {
 			ObjectMapper mapper = new ObjectMapper();
 			mapper.writeValue(response.getOutputStream(), fileUploadItems);	
 		} catch (Exception ex) {
-			ex.printStackTrace();
 			// TODO Don't forget to handle error responding
 		}		
 	}
