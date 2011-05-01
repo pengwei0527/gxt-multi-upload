@@ -55,6 +55,12 @@ Server side code can be written in any language, which supports HTTP  form-type 
 { name:'filename.jpg', status:'OK', message:'Ok.' }
 }}}
 It consist of three attributes:
-  # name - the name of uploaded file
+  # name - the name of uploaded file.
   # status - string representation of status; for more info, see UploadStatus enumeration in the source code.
-  # message - human friendly message for the user. It could contains fro example status message, size of uploaded file or just error messsage from the server.
+  # message - human friendly message for the user. It could contains for example status message, size of uploaded file or just error messsage from the server.
+This format is not strict, you can change existing key-pair attributes, or add another attributes to suit your needs.
+
+The server side code should looks like following Java Servlet:
+{{{
+
+}}}
