@@ -50,4 +50,7 @@ First of all, you have to create a GXT's Grid instance, or you can use your cust
 In next lines, the view class is instantiated and the action (URL) of service for upload handling is defined. After instantiating presenter, the method go() is called, which binds Presenter code together with View and shows the dialog.
 
 ==Create server side code for handling uploads==
-sfasfsdf
+Server side code can be written in any language, which supports HTTP  form-type request processing. The response has to be a HTML mime type in JSON format. The JSON response example is following:
+{{{
+
+}}}
