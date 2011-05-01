@@ -93,4 +93,4 @@ public class GwtMultiUploadServlet extends HttpServlet {
 	}
 }
 }}}
-In code above is used [http://jackson.codehaus.org/ Jackson] library for serializing
+In code above is used [http://jackson.codehaus.org/ Jackson] library for serializing the model into JSON string, Spring Utils for cleaning up file path and finally [http://commons.apache.org/fileupload/ commons-upload] for file upload handling.
