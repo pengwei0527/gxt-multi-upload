@@ -75,10 +75,10 @@ public class GwtMultiUploadServlet extends HttpServlet {
 				String name = item.getFieldName();
 				InputStream stream = item.openStream();
 				if (item.isFormField()) {
-					System.out.println("Form field " + name + " with value " + Streams.asString(stream) + " detected.");
+					// TODO handle form fields (if there are any)
 				} else {
-					System.out.println("File field " + name + " with file name " + item.getName() + " detected.");
 					// TODO handle file writing here
+
 					FileUploadItem model = new FileUploadItem();
 					String fileName = StringUtils.getFilename(StringUtils.cleanPath(item.getName()));
 					model.setName(fileName);
@@ -91,6 +91,7 @@ public class GwtMultiUploadServlet extends HttpServlet {
 			mapper.writeValue(response.getOutputStream(), fileUploadItems);	
 		} catch (Exception ex) {
 			ex.printStackTrace();
+			// 
 		}		
 	}
 }
