@@ -93,4 +93,4 @@ public class GwtMultiUploadServlet extends HttpServlet {
 	}
 }
 }}}
-In code above is used [Jackson http://jackson.codehaus.org/] library for serializing
+In code above is used [http://jackson.codehaus.org/ Jackson] library for serializing
