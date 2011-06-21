@@ -1,0 +1,17 @@
+#Instructions about build demo project.
+
+= Build and run demo project =
+
+For build and run demo project follow these steps:
+
+==Checkout demo project source from SVN==
+
+==Build project==
+
+==Run project using Maven==
+
+==Optional: import project into your IDE==
+Create Maven project files for your favorite IDE, e.g. for Eclipse type:
+{{{
+mvn eclipse:eclipse
+}}}
