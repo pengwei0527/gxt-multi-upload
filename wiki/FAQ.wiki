@@ -3,3 +3,4 @@
 =FAQ=
 
 ==How to include custom HTTP POST parameters==
+One of the solution is to add `FileBeforeSubmitListener` on MultiUploadPresenter. That listener is notified every time, before file is being submitted. In listener onBeforeSubmit() body method, you can add code
