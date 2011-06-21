@@ -3,4 +3,15 @@
 =FAQ=
 
 ==How to include custom HTTP POST parameters==
-One of the solution is to add `FileBeforeSubmitListener` on MultiUploadPresenter. That listener is notified every time, before file is being submitted. In listener onBeforeSubmit() body method, you can add code
+One of the solution is to add `FileBeforeSubmitListener` on `MultiUploadPresenter`. That listener is notified every time, before file is being submitted. In listener `onBeforeSubmit()` body method, you can add code for getting and setting the current URL action. So, the new URL action could contains origin value together with your own parameters.
+{{{
+FileBeforeSubmitListener listener = new FileBeforeSubmitListener() {
+			@Override
+			public void onBeforeSubmit(String filename) {
+				String url = display.getFormPanel().getAction(); 
+				// modify the url..
+				display.getFormPanel().setAction(url);
+			}
+		};
+presenter.addFileBeforeSubmitListener(listener);
+}}}
