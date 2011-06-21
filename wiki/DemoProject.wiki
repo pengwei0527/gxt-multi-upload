@@ -5,8 +5,17 @@
 For build and run demo project follow these steps:
 
 ==Checkout demo project source from SVN==
+Checkout instructions are in Source page of this project. Checkout directory for demo project is:
+{{{
+svn/trunk/gxt-multi-upload-demo/
+}}}
 
 ==Build project==
+For build project using Maven, just type:
+{{{
+mvn clean:compile -Dgwt.compile
+}}}
+where '-Dgwt.compile' parameter runs ANT task for compiling GWT source code using GWT compiler.
 
 ==Run project using Maven==
 
