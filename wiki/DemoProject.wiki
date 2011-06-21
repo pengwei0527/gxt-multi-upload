@@ -1,4 +1,4 @@
-#Instructions about build demo project.
+#summary Instructions about build demo project.
 
 = Build and run demo project =
 
