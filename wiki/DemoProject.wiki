@@ -30,3 +30,6 @@ Create Maven project files for your favorite IDE, e.g. for Eclipse type:
 {{{
 mvn eclipse:eclipse
 }}}
+
+==Optional: running project hosted mode using Eclipse==
+Just launch project using Jetty and then run demo-hosted.launch file in Eclipse.
