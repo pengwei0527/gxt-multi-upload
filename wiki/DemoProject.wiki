@@ -23,7 +23,7 @@ For running demo project, just type:
 {{{
 mvn jetty:run
 }}}
-Demo project is now available on port 8080 with context path 'gxt-multiupload-demo'. For example, on your localhost is: http://localhost:8080/gwt-multiupload-demo.
+Demo project is now available on port 8080 with application path 'demo'. For example, on your localhost is: http://localhost:8080/demo.
 
 ==Optional: import project into your IDE==
 Create Maven project files for your favorite IDE, e.g. for Eclipse type:
