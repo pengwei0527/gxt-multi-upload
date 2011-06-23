@@ -11,7 +11,7 @@ svn/trunk/gxt-multi-upload-demo/
 }}}
 
 ==Build project==
-For build project using Maven, just type:
+Before build project using Maven, you have to install GXT MultiUpload jar module into your Maven repository. For build project, just type:
 {{{
 mvn clean compile -Dgwt.compile
 }}}
